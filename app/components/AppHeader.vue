@@ -1,68 +1,62 @@
-<script setup lang="ts">
-const nuxtApp = useNuxtApp()
-const { activeHeadings, updateHeadings } = useScrollspy()
-
-const items = computed(() => [{
-  label: 'Features',
-  to: '#features',
-  active: activeHeadings.value.includes('features') && !activeHeadings.value.includes('pricing')
-}, {
-  label: 'Pricing',
-  to: '#pricing',
-  active: activeHeadings.value.includes('pricing')
-}, {
-  label: 'Testimonials',
-  to: '#testimonials',
-  active: activeHeadings.value.includes('testimonials') && !activeHeadings.value.includes('pricing')
-}])
-
-nuxtApp.hooks.hookOnce('page:finish', () => {
-  updateHeadings([
-    document.querySelector('#features'),
-    document.querySelector('#pricing'),
-    document.querySelector('#testimonials')
-  ].filter(Boolean) as Element[])
-})
-</script>
-
 <template>
   <UHeader>
     <template #left>
       <NuxtLink to="/">
-        <AppLogo class="w-auto h-6 shrink-0" />
+        <AppLogo/>
       </NuxtLink>
+    </template>
 
-      <TemplateMenu />
+    <template #default>
+      <div style="width: 500px;display: flex;align-items: center">
+        <UNavigationMenu
+          :items="menuItemsByIndex"
+          class="hidden lg:block"
+        />
+
+        <UNavigationMenu
+          :items="menuItemsByProduct"
+          class="hidden lg:block"
+        />
+      </div>
     </template>
 
     <template #right>
-      <UNavigationMenu
-        :items="items"
-        variant="link"
-        class="hidden lg:block"
-      />
-
-      <UButton
-        label="Download App"
-        variant="subtle"
-        class="hidden lg:block"
-      />
-
-      <UColorModeButton />
+      <UColorModeButton/>
     </template>
 
     <template #body>
       <UNavigationMenu
-        :items="items"
+        :items="menuItemsByIndex"
         orientation="vertical"
         class="-mx-2.5"
       />
-      <UButton
-        class="mt-4"
-        label="Download App"
-        variant="subtle"
-        block
-      />
+
     </template>
   </UHeader>
 </template>
+
+
+<script setup lang="ts">
+import {useRoute} from "nuxt/app";
+
+const route = useRoute();
+
+const menuItemsByIndex = computed(() => [
+  {
+    label: '首页',
+    to: '/',
+    // active: route.path.startsWith('/')
+    active: false,
+  }
+])
+
+const menuItemsByProduct = computed(() => [
+  {
+    label: '产品',
+    to: '/',
+    active: false
+  }
+])
+
+</script>
+

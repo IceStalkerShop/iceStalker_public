@@ -6,3 +6,12 @@
 @theme {
   --font-sans: 'Public Sans', sans-serif;
 }
+
+html{
+  font-family: Microsoft YaHei,Pingfang SC,STHeiti,Verdana,Arial,Tahoma,sans-serif !important;
+}
+
+
+:root {
+  --ui-header-height-60: calc(var(--ui-header-height) * 1.25)
+}

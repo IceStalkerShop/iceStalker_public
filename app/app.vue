@@ -5,11 +5,11 @@ const color = computed(() => colorMode.value === 'dark' ? '#171717' : 'white')
 
 useHead({
   meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { key: 'theme-color', name: 'theme-color', content: color }
+    {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+    {key: 'theme-color', name: 'theme-color', content: color}
   ],
   link: [
-    { rel: 'icon', href: '/favicon.ico' }
+    {rel: 'icon', href: '/favicon.ico'}
   ],
   htmlAttrs: {
     lang: 'en'
@@ -25,12 +25,12 @@ useSeoMeta({
 
 <template>
   <UApp :toaster="{ expand: false }">
-    <AppHeader />
+    <AppHeader/>
 
-    <UMain>
-      <NuxtPage />
+    <UMain class="relative" style="top: calc(-1 * var(--ui-header-height-60))">
+      <NuxtPage/>
     </UMain>
 
-    <AppFooter />
+    <AppFooter/>
   </UApp>
 </template>
