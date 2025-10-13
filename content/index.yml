@@ -26,6 +26,9 @@ section:
     mobile: '/images/macbook-mobile.svg'
     desktop: '/images/macbook.svg'
     logo: '/images/logo/logo.png'
+    indexByCarousel1: '/images/indexByCarousel/1.png'
+    indexByCarousel2: '/images/indexByCarousel/2.png'
+    product1: '/images/indexByProduct/product1.png'
   features:
     - title: Optimize your focus time
       description: Let AI identify your peak coding hours and adapt to your natural rhythm. Focus on what matters most - writing great code, while our system optimizes your productivity patterns.
@@ -37,39 +40,8 @@ section:
       description: Automate your workflow optimization from code snippets to focus management. Ship better code faster with a streamlined development process.
       class: border-l border-default pt-4 pl-4
 features:
-  title: Take control of your [productivity]{.text-primary}
-  description: Make every coding session count with smart analytics and workflow optimization.
-  features:
-    - title: AI-Powered Focus Tracking
-      description: Discover your optimal coding hours with real-time AI analysis of your productivity patterns.
-      icon: i-lucide-wand-sparkles
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Distraction Alerts
-      description: Get notified when your focus drifts and bring your attention back.
-      icon: i-lucide-bell-ring
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Smart Code Snippets
-      description: Save and reuse frequently used code blocks for efficiency.
-      icon: i-lucide-code-xml
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Deep Work Mode
-      description: Block distractions and set structured coding sessions with built-in Pomodoro timers.
-      icon: i-lucide-moon
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Collaborative Insights
-      description: Sync your workflow with teammates and see when they are most productive.
-      icon: i-lucide-mouse-pointer-2
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
-    - title: Performance Analytics
-      description: Track your coding metrics and get insights to boost your speed and code quality.
-      icon: i-lucide-chart-line
-      ui:
-        leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
+  title: 了解我们的 [SaaS 产品]{.text-primary}
+  description: 覆盖全行业的SaaS产品，助力微小企业数字升级.
 steps:
   title: Start coding smarter in [3 steps]{.text-primary}
   description: Transform your development workflow with our AI-powered assistant.
@@ -136,14 +108,14 @@ testimonials:
     - quote: Game-changer for our team. The focus tracking and smart alerts helped us reduce meeting interruptions by 40% and increased our sprint velocity.
       user:
         name: 'Sébastien Chopin'
-        description:  'Lead Software Engineer'
+        description: 'Lead Software Engineer'
         target: _blank
         avatar:
           src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/atinux'
     - quote: Finally, a productivity tool that understands developers. The AI features helped me identify my peak coding hours and now I accomplish more in less time.
       user:
         name: 'Benjamin Canac'
-        description:  'Senior Frontend Developer'
+        description: 'Senior Frontend Developer'
         target: _blank
         avatar:
           src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/benjamincanac'
